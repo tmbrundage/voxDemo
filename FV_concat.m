@@ -7,13 +7,13 @@ dirn = '/Users/Ted/__Princeton/__G2_Spring/__COS_424/voxDemo/';
 
 % add tools path
 run('/Users/Ted/__RandomCode/vlfeat-0.9.20/toolbox/vl_setup')
-addpath(genpath('/Users/Ted/__Princeton/__G2_Spring/__COS_424/tools'))
+addpath(genpath('/Users/Ted/__Princeton/__G2_Spring/__COS_424/voxDemo/tools'))
 
 
 [DAT, LB, FNS] = loadAll(dirn);
 
 %extract the MFCC
-mfcc = cell(1,1000);
+mfcc = cell(1,length(DAT));
 
 for i = 1:length(DAT)
     mfcc{i} = DAT{i}.mfc;
@@ -26,3 +26,5 @@ GENDATA.classnames = {'Blues', 'Classical', 'Country', 'Disco', 'Hiphop',...
 	'Jazz', 'Metal', 'Pop', 'Reggae', 'Rock'};
 %run fisher vector
 FV = demo_fv(GENDATA, 3, 3);
+save('FV.mat','FV');
+save('LB.mat','LB');
