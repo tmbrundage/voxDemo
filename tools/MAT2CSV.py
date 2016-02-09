@@ -36,10 +36,6 @@ def recSave(fn, d):
             if isinstance(val, dict):
                 recSave('%s_%s' % (fn, key), val)
             else:
-<<<<<<< HEAD
-=======
-                print type(val)
->>>>>>> 4d4fe8b7484a3ed42ce8ab026c73faf4b53e5542
                 if isinstance(val, int): 
                     np.savetxt('%s_%s.csv' %(fn,key),[val],delimiter=',')
                 elif isinstance(val,np.ndarray):

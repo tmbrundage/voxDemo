@@ -2,12 +2,10 @@
 % FV Concatenating
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Change this to the directory containing your data folder
-dirn = '/Users/Ted/__Princeton/__G2_Spring/__COS_424/voxDemo/';
+dirn = '/Users/Gazelle/Documents/voxDemo/';
 
 % add tools path
-run('/Users/Ted/__RandomCode/vlfeat-0.9.20/toolbox/vl_setup')
-addpath(genpath('/Users/Ted/__Princeton/__G2_Spring/__COS_424/voxDemo/tools'))
-
+addpath(genpath('/Users/Gazelle/Documents/voxDemo/tools'))
 
 [DAT, LB, FNS] = loadAll(dirn);
 
